@@ -48,11 +48,19 @@
 body {
     overflow: hidden;
 
-    font: var(--body-sm);
+    font: var(--body-md);
     color: var(--text-body);
     background-color: var(--shape-background);
 }
 
 h1, h2 {
     color: var(--text-heading);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-half {
+    flex: 50%;
 }

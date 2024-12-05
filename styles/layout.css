@@ -44,13 +44,13 @@ main {
     background-color: var(--shape-body);
 
     & .main-container {
-        margin: 5rem 8.125rem;
+        max-width: 50rem;
+        padding: 5rem 8.125rem;
         overflow: hidden;
 
         & h1 {
             font: var(--heading-md);
             color: var(--text-heading);
-            margin-bottom: 2.5rem;
         }
     }
 }
