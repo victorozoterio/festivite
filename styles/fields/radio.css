@@ -1,0 +1,82 @@
+.flex-half .radio-wrapper {
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    border: 2px solid var(--input-stroke);
+    background-color: var(--input-base);
+}
+
+.radio-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+
+    & input:focus {
+        background-color: var(--shape-hover);
+    }
+}
+
+.radio-wrapper {
+    & label, svg {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    & svg {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    & .radio-onsite {
+        position: relative;
+        height: 2.5rem;
+
+        & svg {
+            left: 10%;
+        }
+
+        & label {
+            left: 30%;
+        }
+
+        &:hover, &:has(input:focus) {
+            & svg path {
+                stroke: var(--brand-light);
+            }
+
+            & label {
+                font-weight: 600;
+            }
+        }
+    }
+
+    & .radio-remote {
+        position: relative;
+        height: 2.5rem;
+        
+        & svg {
+            left: 20%;
+        }
+
+        & label {
+            left: 40%;
+        }
+
+        &:hover, &:has(input:focus) {
+            & svg path {
+                stroke: var(--brand-light);
+            }
+
+            & label {
+                font-weight: 600;
+            }
+        }
+    }
+
+    & input {
+        position: absolute;
+        border: none;
+        height: 100%;
+    }
+}
