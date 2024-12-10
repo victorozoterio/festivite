@@ -23,7 +23,7 @@
     }
 }
 
-.radio-wrapper .radio-onsite {
+.radio-onsite, .radio-remote {
     position: relative;
     height: 3rem;
 
@@ -34,6 +34,23 @@
         transform: translateY(-50%);
     }
 
+    &:hover, &:has(input:focus), &:has(:checked) {
+        & svg path {
+            stroke: var(--brand-light);
+        }
+
+        & input {
+            background-color: var(--shape-hover); 
+        }
+
+        & label {
+            color: var(--text-heading);
+            font-weight: 600;
+        }
+    }
+}
+
+.radio-onsite {
     & svg {
         left: 10%;
     }
@@ -41,53 +58,15 @@
     & label {
         left: 30%;
     }
-
-    &:hover, &:has(input:focus), &:has(:checked) {
-        & svg path {
-            stroke: var(--brand-light);
-        }
-
-        & input {
-            background-color: var(--shape-hover); 
-        }
-
-        & label {
-            font-weight: 600;
-        }
-    }
 }
 
-.radio-wrapper .radio-remote {
-    position: relative;
-    height: 3rem;
-
-    & label, svg {
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
+.radio-remote {
     & svg {
         left: 20%;
     }
 
     & label {
         left: 40%;
-    }
-
-    &:hover, &:has(input:focus), &:has(:checked) {
-        & svg path {
-            stroke: var(--brand-light);
-        }
-
-        & input {
-            background-color: var(--shape-hover); 
-        }
-
-        & label {
-            font-weight: 600;
-        }
     }
 }
 
@@ -98,8 +77,8 @@
     display: flex;
     justify-self: center;
     justify-content: center;
-    align-items: center;       
-    
+    align-items: center;
+
     background-color: var(--shape-button);
 
     & input {
@@ -155,5 +134,47 @@
 
     & #cyan {
         background-color: #59FFF9;
+    }
+}
+
+.radio-wrapper-8rem {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    gap: 0.5rem;
+}
+
+.radio-wrapper-8rem .radio-inner {
+    position: relative;
+    display: grid;
+    background-color: var(--shape-button);
+    border-radius: 0.5rem;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--input-stroke);
+
+    & img {
+        padding: 0.25rem 0.25rem 0 0.25rem;
+        height: 100%;
+        width: 100%;
+    }
+
+    & input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: transparent;
+    }
+
+    &:hover, &:has(input:focus), &:has(:checked) {
+        border-color: var(--brand-light);
+    }   
+
+    & label {
+        font: var(--body-sm);
+        color: #FFFFFF;
+        text-align: center;
+        margin: 0.5rem;
     }
 }
