@@ -1,21 +1,32 @@
 .flex-half .radio-wrapper {
     border-radius: 0.5rem;
     padding: 0.25rem;
+    gap: 0.25rem;
     border: 2px solid var(--input-stroke);
     background-color: var(--input-base);
 }
 
 .radio-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+    gap: 0.75rem;
 
-    & input:focus {
-        background-color: var(--shape-hover);
+    & input[name="event-location"] {
+        position: absolute;
+        border: none;
+        height: 100%;
+    }
+
+    & svg {
+        width: 1rem;
+        height: 1rem;
     }
 }
 
-.radio-wrapper {
+.radio-wrapper .radio-onsite {
+    position: relative;
+    height: 3rem;
+
     & label, svg {
         position: absolute;
         z-index: 1;
@@ -24,59 +35,125 @@
     }
 
     & svg {
-        width: 1rem;
-        height: 1rem;
+        left: 10%;
     }
 
-    & .radio-onsite {
-        position: relative;
-        height: 2.5rem;
+    & label {
+        left: 30%;
+    }
 
-        & svg {
-            left: 10%;
+    &:hover, &:has(input:focus), &:has(:checked) {
+        & svg path {
+            stroke: var(--brand-light);
+        }
+
+        & input {
+            background-color: var(--shape-hover); 
         }
 
         & label {
-            left: 30%;
-        }
-
-        &:hover, &:has(input:focus) {
-            & svg path {
-                stroke: var(--brand-light);
-            }
-
-            & label {
-                font-weight: 600;
-            }
+            font-weight: 600;
         }
     }
+}
 
-    & .radio-remote {
-        position: relative;
-        height: 2.5rem;
-        
-        & svg {
-            left: 20%;
+.radio-wrapper .radio-remote {
+    position: relative;
+    height: 3rem;
+
+    & label, svg {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    & svg {
+        left: 20%;
+    }
+
+    & label {
+        left: 40%;
+    }
+
+    &:hover, &:has(input:focus), &:has(:checked) {
+        & svg path {
+            stroke: var(--brand-light);
+        }
+
+        & input {
+            background-color: var(--shape-hover); 
         }
 
         & label {
-            left: 40%;
-        }
-
-        &:hover, &:has(input:focus) {
-            & svg path {
-                stroke: var(--brand-light);
-            }
-
-            & label {
-                font-weight: 600;
-            }
+            font-weight: 600;
         }
     }
+}
+
+.radio-wrapper .radio-inner {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;       
+    
+    background-color: var(--shape-button);
 
     & input {
-        position: absolute;
-        border: none;
-        height: 100%;
+        all: unset;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+    }
+
+    &:hover, &:has(input:focus), &:has(:checked) {
+        border: 3px solid var(--brand-light);
+    }
+
+    & #blue {
+        background-color: var(--brand-light);
+    }
+
+    & #navy {
+        background-color: #6A59FF;
+    }
+
+    & #purple {
+        background-color: #B259FF;
+    }
+
+    & #fuschia {
+        background-color: #FF59F9;
+    }
+
+    & #pink {
+        background-color: #FF598B;
+    }
+
+    & #red {
+        background-color: var(--danger);
+    }
+
+    & #orange {
+        background-color: #FF8B59;
+    }
+
+    & #yellow {
+        background-color: #FFCD59;
+    }
+
+    & #lime {
+        background-color: #E1FF59;
+    }
+
+    & #green {
+        background-color: #59FF91;
+    }
+
+    & #cyan {
+        background-color: #59FFF9;
     }
 }

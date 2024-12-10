@@ -5,6 +5,7 @@ input, textarea, select {
     border-radius: 0.5rem;
     border: 2px solid var(--input-stroke);
     background-color: var(--input-base);
+    font: var(--body-md);
     color: var(--input-placeholder);
 }
 
