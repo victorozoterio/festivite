@@ -22,7 +22,11 @@ form .topic {
 form .customization {
     & h3 {
         font: var(--body-sm);
-        color: #FFFFFF;
+        color: var(--text-body);
+    }
+
+    & .radio-wrapper + h3 {
+        margin-top: 1.75rem;
     }
 }
 

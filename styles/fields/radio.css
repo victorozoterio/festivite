@@ -141,17 +141,15 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     gap: 0.5rem;
+    margin-bottom: 1.75rem;
 }
 
 .radio-wrapper-8rem .radio-inner {
     position: relative;
     display: grid;
     background-color: var(--shape-button);
-    border-radius: 0.5rem;
-    padding: 0;
-    width: 100%;
-    height: 100%;
     border: 2px solid var(--input-stroke);
+    border-radius: 0.5rem;
 
     & img {
         padding: 0.25rem 0.25rem 0 0.25rem;
@@ -177,4 +175,45 @@
         text-align: center;
         margin: 0.5rem;
     }
+}
+
+.radio-boolean {
+    width: 3.25rem;
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+    border-radius: 2rem;
+    padding: 0.25rem;
+
+    & input {
+        border: none;
+        padding: 0.5rem;
+        width: auto;
+        background-color: var(--input-stroke);
+        border-radius: 2rem;
+        pointer-events: none;
+    }
+
+    & #light {
+        margin-left: auto;
+        background-color: transparent;
+    }
+
+    &:has(input#light:checked) {
+        background-color: var(--brand-light);
+
+        & #light {
+            background-color: var(--text-heading);
+        }
+
+        & #dark {
+            background-color: transparent;
+        }
+    }
+}
+
+#style-type {
+    font: var(--body-sm);
+    color: var(--text-heading);
+    align-self: center;
+    margin-left: 0.75rem;
 }
