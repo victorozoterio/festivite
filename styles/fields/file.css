@@ -1,7 +1,7 @@
 .input-file {
     position: relative;
     width: 7.25rem;
-    height: 1.8rem;
+    height: 2.5rem;
     background-color: var(--shape-button);
     border-radius: 0.5rem;
 
@@ -17,8 +17,8 @@
     
     & label {
         position: absolute;
-        color: var(--text-heading);
         font-weight: 600;
+        color: var(--text-heading);
         top: 50%;
         transform: translateY(-50%) translateX(-50%);
         left: 60%;
@@ -27,6 +27,7 @@
 
     & input {
         position: absolute;
+        height: 2.5rem;
         padding: 0;
         top: 50%;
         transform: translateY(-50%);

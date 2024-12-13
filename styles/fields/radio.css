@@ -177,8 +177,15 @@
     }
 }
 
+.style-wrapper {
+    display: flex;
+    height: 2.5rem;
+    align-items: center;
+}
+
 .radio-boolean {
-    width: 3.25rem;
+    width: 3.5rem;
+    height: 2rem;
     background-color: var(--input-base);
     border: 1px solid var(--input-stroke);
     border-radius: 2rem;
@@ -187,7 +194,6 @@
     & input {
         border: none;
         padding: 0.5rem;
-        width: auto;
         background-color: var(--input-stroke);
         border-radius: 2rem;
         pointer-events: none;

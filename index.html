@@ -235,14 +235,17 @@
                                 <h3>Estilo</h3>
                             
                                 <div class="flex">
-                                    <div class="radio-boolean flex">
-                                        <label for="dark"></label>
-                                        <input type="radio" name="style" id="dark" checked>
+                                    <div class="style-wrapper">
+                                        <div class="radio-boolean flex">
+                                            <label for="dark"></label>
+                                            <input type="radio" name="style" id="dark" checked>
+    
+                                            <label for="light"></label>
+                                            <input type="radio" name="style" id="light">
+                                        </div>
+                                        <span id="style-type">Escuro</span>
 
-                                        <label for="light"></label>
-                                        <input type="radio" name="style" id="light">
                                     </div>
-                                    <span id="style-type">Escuro</span>
                                 </div>
                             </section>
 
@@ -265,7 +268,45 @@
                         </div>
                     </fieldset>
 
-                    
+                    <fieldset class="contact-information">
+                        <div class="topic">
+                            <img src="assets/icons/contact.svg" alt="Icone de contato">
+                            <h2>Dados para contato</h2>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" id="name" placeholder="Nome completo">
+
+                            <div class="error flex">
+                                <img src="assets/icons/circle-alert.svg" alt="">
+                                <p>Campo obrigatório</p>
+                            </div>
+                        </div>
+
+
+                        <div class="flex">
+                            <div class="input-wrapper flex-half">
+                                <label for="mail">E-mail</label>
+                                <input type="email" name="mail" id="mail" placeholder="exemplo@email.com">
+
+                                <div class="error flex">
+                                    <img src="assets/icons/circle-alert.svg" alt="">
+                                    <p id="errorMessage">Campo obrigatório</p>
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper flex-half">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" name="phone" id="phone" placeholder="(99) 99999-9999">
+
+                                <div class="error flex">
+                                    <img src="assets/icons/circle-alert.svg" alt="">
+                                    <p>Campo obrigatório</p>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
                 </form>
             </main>
         </main>
