@@ -50,3 +50,9 @@ document.querySelector('.radio-boolean').addEventListener('click', (event) => {
         }
     }
 });
+
+ // Atualiza o elemento #select-file com o nome do arquivo selecionado
+ document.getElementById('cover-photo').addEventListener('change', (event) => {
+    const fileName = event.target.files[0]?.name || 'Nenhum arquivo selecionado';
+    document.getElementById('select-file').textContent = fileName;
+});

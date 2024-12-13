@@ -171,7 +171,7 @@
 
     & label {
         font: var(--body-sm);
-        color: #FFFFFF;
+        color: var(--text-heading);
         text-align: center;
         margin: 0.5rem;
     }
@@ -212,6 +212,7 @@
 }
 
 #style-type {
+    width: 3rem;
     font: var(--body-sm);
     color: var(--text-heading);
     align-self: center;
