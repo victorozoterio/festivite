@@ -29,10 +29,7 @@
     --input-placeholder: #869198;
 
     --danger: #FF5959;
-
     --brand-light: #59B2FF;
-    --brand-mid: #3487CF;
-    --brand-dark: #1D6FB6;
 }
 
 body {
@@ -53,4 +50,8 @@ h1, h2 {
 
 .flex-half {
     flex: 50%;
+}
+
+.grid {
+    display: grid;
 }

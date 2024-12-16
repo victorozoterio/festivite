@@ -99,7 +99,7 @@
                         
                         <div class="radio-wrapper">
                             <div class="radio-inner">
-                                <input type="radio" name="colors" id="blue">
+                                <input type="radio" name="colors" id="blue" checked>
                                 <label for="blue"></label>
                             </div>
 
@@ -124,7 +124,7 @@
                             </div>
 
                             <div class="radio-inner">
-                                <input type="radio" name="colors" id="red" checked>
+                                <input type="radio" name="colors" id="red">
                                 <label for="red"></label>
                             </div>
 
@@ -276,10 +276,10 @@
 
                         <div class="input-wrapper">
                             <label for="name">Nome</label>
-                            <input type="text" name="name" id="name" placeholder="Nome completo">
+                            <input type="text" name="name" id="name" placeholder="Nome completo" required>
 
                             <div class="error flex">
-                                <img src="assets/icons/circle-alert.svg" alt="">
+                                <img src="assets/icons/circle-alert.svg" alt="Icone de alerta">
                                 <p>Campo obrigatório</p>
                             </div>
                         </div>
@@ -288,25 +288,64 @@
                         <div class="flex">
                             <div class="input-wrapper flex-half">
                                 <label for="mail">E-mail</label>
-                                <input type="email" name="mail" id="mail" placeholder="exemplo@email.com">
+                                <input type="email" name="mail" id="mail" placeholder="exemplo@email.com" required>
 
                                 <div class="error flex">
-                                    <img src="assets/icons/circle-alert.svg" alt="">
+                                    <img src="assets/icons/circle-alert.svg" alt="Icone de alerta">
                                     <p id="errorMessage">Campo obrigatório</p>
                                 </div>
                             </div>
 
                             <div class="input-wrapper flex-half">
                                 <label for="phone">Telefone</label>
-                                <input type="tel" name="phone" id="phone" placeholder="(99) 99999-9999">
+                                <input type="tel" name="phone" id="phone" placeholder="(99) 99999-9999" required>
 
                                 <div class="error flex">
-                                    <img src="assets/icons/circle-alert.svg" alt="">
+                                    <img src="assets/icons/circle-alert.svg" alt="Icone de alerta">
                                     <p>Campo obrigatório</p>
                                 </div>
                             </div>
                         </div>
                     </fieldset>
+
+                    <div class="divider"></div>
+
+                    <div class="terms-wrapper grid">
+                        <div class="terms-inner flex">
+                            <img src="assets/icons/check.svg" alt="Icone de verificado">
+                            <input type="checkbox" name="terms" id="terms">
+                            <label for="terms"></label>
+    
+                            <p>
+                                Li e concordo com os <a href="#">Termos e Condições</a> e com a <a href="#">Política de Privacidade</a>
+                            </p>
+                        </div>
+    
+                        <div class="terms-inner flex">
+                            <img src="assets/icons/check.svg" alt="Icone de verificado">
+                            <input type="checkbox" name="terms" id="terms">
+                            <label for="terms"></label>
+    
+                            <p>
+                                Aceito receber atualizações e promoções por e-mail
+                            </p>
+                        </div>
+    
+                        <div class="terms-inner flex">
+                            <img src="assets/icons/check.svg" alt="Icone de verificado">
+                            <input type="checkbox" name="terms" id="terms">
+                            <label for="terms"></label>
+    
+                            <p>
+                                Aceito receber atualizações e promoções por SMS
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="actions-wrapper flex">
+                        <img src="assets/icons/ticket.svg" alt="Icone de ingresso">
+                        <button type="submit">Gerar convite</button>
+                    </div>
                 </form>
             </main>
         </main>

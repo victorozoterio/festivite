@@ -1,0 +1,30 @@
+.actions-wrapper {
+    position: relative;
+    margin-top: 3rem;
+    width: 11rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    align-items: center;
+    margin-left: auto;
+    background-color: #1D6FB6;
+    gap: 0.75rem;
+
+    & img {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-left: 11%;
+        pointer-events: none;
+    }
+
+    & button {
+        all: unset;
+        position: absolute;
+        width: 11rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        text-indent: 28%;
+        color: #FFFFFF;
+        gap: 0.75rem;
+    }
+}
